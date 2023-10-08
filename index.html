@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Green Guard</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Green Guard - Login</title>
 </head>
 <body>
-    <header>
-         <h1>Green Guard - Greenhouse Gas Calculator</h1>
-    </header> 
-    
-    <form id="calculator-form">
-        <h2>Transportation</h2>
-        <label for="transportation-input">Miles Driven per Week:</label>
-        <input type="number" id="transportation-input" required>
+    <div class="login-container">
+        <h2>Login to <img src="green_logo.jpg"height =25 width =25></h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <h2>Diet</h2>
-        <label for="diet-input">Meat Consumption (kg/week):</label>
-        <input type="number" id="diet-input" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        <h2>Energy Consumption</h2>
-        <label for="energy-input">Electricity Usage (kWh/week):</label>
-        <input type="number" id="energy-input" required>
-        <br>
-        <button type="button" onclick="calculateFootprint()">Calculate</button>
-    </form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-    <div id="result"></div>
-
-    <script src="scripts.js"></script>
+            <button type="button" onclick="authenticateUser()">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
